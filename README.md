@@ -44,7 +44,7 @@ And what is the objective? To find the buried gold of a forgotten civilization (
     // player's start position
     player = 43;
     // randomized gold position, limited to player's start position
-    gold = new Date%z;
+    gold = new Date%player;
     
     // run game loop on each key press
     onkeyup = function(e) {
@@ -64,11 +64,15 @@ And what is the objective? To find the buried gold of a forgotten civilization (
       // Here we build the map string.
       for (tile = 0; tile < 53; tile++) {
         if (tile % 9) {
-          map += '.';
-        } else if (tile == player) {
-          map += '@';
-        } else if (tile == gold) {
-          map += '$';
+          if (tile == player) {
+            if (tile == gold) {
+              map += '$';
+            } else {
+              map += '@';
+            }
+          } else {
+            map += '.';
+          }
         } else {
           map += '\n';
         }

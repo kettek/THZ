@@ -3,6 +3,8 @@ Created by @kts_kettek in response to @eigenbom, THZ is a treasure huntin' "rogu
 
 And what is the objective? To find the buried gold of a forgotten civilization (and maybe reload the page if you can't ;])
 
+Check out the 560 character sequel [here](https://github.com/kettek/THZ-II/)!
+
 ## Code (paste in browser console)
     z=43;r=new Date%z;onkeyup=function(e){d=1-e.which%4;z+=d%2?d*9:-d-1;m='';for(a=1;a++<53;m+=a%9?a==z?a==r?'$':'@':'.':'\n');console.log(m)}
 
